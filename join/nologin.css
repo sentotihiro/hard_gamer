@@ -1,0 +1,70 @@
+body {
+    font-family: Helvetica, Arial, fantasy;
+    margin: 0;
+    padding: 0;
+    background-image: url('kokki.jpg');
+    background-size: 1000px 700px;
+}
+
+.header {
+    text-align: center;
+    color: goldenrod;
+    font-size: 40px;
+    background-color: black;
+    margin-top: 0;
+    padding-top: 20px;
+    height: 65px;
+    border: 1px solid crimson; 
+    width: 1364px;
+    border-radius: 5%;
+}
+
+
+#menubar {
+    position: relative;
+    left: 1166px;
+    width: 200px;
+    text-align: center;
+    
+}
+
+#menubar a {
+    margin-top: 30px;
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 18px;
+}
+
+.box1 {
+    background-color: black;
+    height: 200px;
+    opacity: 1;
+    border: 1px solid darkred;
+    margin: auto;
+    line-height: 200px;
+    border-radius: 5%;
+    
+}
+
+.box2 {
+    background-color: black;
+    opacity: 1;
+    height: 200px;
+    border: 1px solid darkred;
+    line-height: 200px;
+     border-radius: 5%;
+}
+
+.box3 {
+    background-color: black;
+    opacity: 1;
+    height: 200px;
+    border: 1px solid darkred;
+    line-height: 200px;
+     border-radius: 5%;
+}
+
+#box a:hover {
+    opacity: 0.7;
+    
+}
