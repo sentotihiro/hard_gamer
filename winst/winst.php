@@ -1,13 +1,10 @@
 <?php
  session_start();
- require('dbconnect.php');
+ require('../dbconnect.php');
 
   //選択したチャンピオンのセッション保存
          $_SESSION['use'] = $_POST['prefecuture'];
-         $_SESSION['plz'] = $_POST['enemy'];
- 
-
-
+         //$_SESSION['plz'] = $_POST['enemy'];
  
 
   //未ログインユーザーへのログインＰ遷移処理
@@ -34,7 +31,7 @@
 <!DOCTYPE html>
  <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" charset="utf-8">
+      <meta charset="utf-8">
       <title>対面モード</title>
      <link rel="stylesheet" href="taimen.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -48,7 +45,7 @@
            </p>
          </div>
           
-         <div><img id="mainicon" src="img/0.jpg" width="120" height="120"></div>
+         <div><img id="mainicon" src="../img/0.jpg" width="120" height="120"></div>
          
          
         
@@ -95,49 +92,11 @@
                 </div>
                     
                 
-                 <div id="eneimg"><img id="enecon" src="img/0.jpg" width="120" height="120"></div>
+                 <div id="eneimg"><img id="enecon" src="../img/hatena.jpg" width="120" height="120"></div>
                 
                 
                                 
-                <div id="aite">
-                <label id="enemessage" for="enemy">対面を希望するチャンピオンを選択してください</label>
-                
-                <select name="enemy" id="enemy" onchange="getSelectenemy()">
-                  <option value="0">アイバーン</option>
-                  <option value="1">アカリ</option>
-                  <option value="2">アジール</option>
-                  <option value="3">アッシュ</option>
-                  <option value="4">アニー</option>
-                  <option value="5">アニビア</option>
-                  <option value="6">アムム</option>
-                  <option value="7">アリスター</option>
-                  <option value="8">アーゴット</option>
-                  <option value="9">アーリ</option>
-                  <option value="10">イブリン</option>
-                  <option value="11">イラオイ</option>
-                  <option value="12">イレリア</option>
-                  <option value="13">ウーコン</option>
-                  <option value="14">ウディア</option>
-                  <option value="15">エイトロックス</option>
-                  <option value="16">エコー</option>
-                  <option value="17">エズリアル</option>
-                  <option value="18">エリス</option>
-                  <option value="19">オーン</option>
-                  <option value="20">オラフ</option>
-                  <option value="21">オリアナ</option>
-                  <option value="22">オレリオン・ソル</option>
-                  <option value="23">カーサス</option>
-                  <option value="24">カ＝ジックス</option>
-                  <option value="25">カイサ</option>
-                  <option value="26">カサディン</option>
-                  <option value="27">カシオペア</option>
-                  <option value="28">カタリナ</option>
-                  <option value="29">カミール</option>
-                  <option value="30">カリスタ</option>
-                    
-                </select>
-                </div>
-                
+              
              <input id="watabutton" type="submit" name="sendch" value="マッチング開始">             
              
              
@@ -173,7 +132,7 @@
                   var $value = $elementReference.options[$selectedindex].value;//selectタグのoptionタグを連想配列としindex番号を$selectedindexで指定,
                   　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　//valueで取得
                   
-                  $icon = "../lolol/img/" + $value + ".jpg";
+                  $icon = "../img/" + $value + ".jpg";
                   document.getElementById("mainicon").setAttribute("src", $icon); 
               }
              

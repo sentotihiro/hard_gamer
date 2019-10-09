@@ -1,3 +1,5 @@
+//node.jsのリアルタイム通信を実装しようと思っていました;
+
 var app = require('http').createServer(handler),//このサーバーにリクエストが来た時にhandlerを実行しなさい
     io = require('socket.io').listen(app), //appサーバーとの紐づけ
     fs = require('fs');

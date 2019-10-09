@@ -1,13 +1,13 @@
 <?php
  session_start();
- require('dbconnect.php');
+ require('../dbconnect.php');
  //include('taimen.php');
 
  $uri = ".jpg";
  $watashi = $_POST['prefecture'];
- $anata = $_POST['enemy'];
+ //$anata = $_POST['enemy'];
  $urii = "img/".$watashi.$uri; //自分が使用すると選択したチャンピオンの画像変数
- $urf = "img/".$anata.$uri;   //対面に希望したチャンピオンの画像変数
+ //$urf = "img/".$anata.$uri;　　//対面に希望したチャンピオンの画像変数
  
 
   //未ログインユーザーへのログインＰ遷移処理
@@ -54,7 +54,7 @@ if (!empty($_POST['sendch'])) {
          $stt->execute(array(
               $_POST['prefecture']
          ));
-    $smt = $stt->fetch(); //抽出結果の値とインデックスをarray_flip()で反転して[0]=>結果とする、html上でimplode()を用いて配列を文字列に連結して名前のみ表示している。
+    $smt = $stt->fetch();  //抽出結果の値とインデックスをarray_flip()で反転して[0]=>結果とする、html上でimplode()を用いて配列を文字列に連結して名前のみ表示している。
     $stmt = array_flip($smt);
  }
 
@@ -62,7 +62,7 @@ if (!empty($_POST['sendch'])) {
 <!DOCTYPE html>
  <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" charset="utf-8">
+      <meta charset="utf-8">
       <title>対面モード</title>
      <link rel="stylesheet" href="taimen.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -82,7 +82,8 @@ if (!empty($_POST['sendch'])) {
          <div id="myselect">
             <form name="making" method="post" action="taimen.php">
                
-            <?php echo "<img src=\"$urf\" width=\"120\" height=\"120\">";?>
+           <div id="eneimg"><img id="enecon" src="../img/hatena.jpg" width="120" height="120"></div>
+                
                 <?php if(!empty($stmt)): ?>
                 <div id="player_name"><?php  echo implode("",(array_keys($stmt,0))) ?></div>
                 

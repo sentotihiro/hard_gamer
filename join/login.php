@@ -24,7 +24,7 @@
           $_SESSION['name'] = $member['name'];
           
           if ($_POST['save'] === 'on') {
-              setcookie('email', $_POST['email'], time()+60*60*24*14);//14日後まで$_POST[email]の値をcookie[email]にセット
+              setcookie('email', $_POST['email'], time()+60*60*24*14);//14日後まで$_POST[email]の値をcookie[email]にセット 
           }
           
           header('Location: home.php');
@@ -71,7 +71,7 @@
           
         <dt>メールアドレス</dt>
         <dd>
-          <input type="text" name="email" size="35" maxlength="255" value="<?php  print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>" />
+          <input type="email" name="email" size="35" maxlength="255" value="<?php  print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>" />
             <?php if ($error['login'] === 'blank'): ?>
              <p class="error">* 名前とメールアドレスとパスワードをご記入ください</p>
             <?php  endif; ?>

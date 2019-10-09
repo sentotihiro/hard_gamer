@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" charset="utf-8">
      <title>対面の館</title>
      <link rel="stylesheet" href="nologin.css">
     </head>
@@ -28,8 +28,8 @@
         
        <div id="menubar">   
         <div class="box1" id="box"><a href="../taimen.php">対面モード</a></div>
-        <div class="box2" id="box"><a href="Winst.php">Win Streak</a></div>
-        <div class="box3" id="box"><a href="senseki.php">戦績管理</a></div>
+        <div class="box2" id="box"><a href="../winst/Winst.php">Win Streak</a></div>
+        <div class="box3" id="box"><a href="../join/logout.php">ログアウト</a></div>
         </div>
     </body>
 </html>
