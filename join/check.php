@@ -59,10 +59,8 @@ $statement->execute(array(
 		<dt>パスワード</dt>
 		<dd>
 		【表示されません】
-		</dd>
-		<dt>写真など</dt>
-		<dd>
-		</dd>
+        </dd>
+		
 	</dl>
 	<div><a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a> | <input type="submit" value="登録する" /></div>
 </form>
